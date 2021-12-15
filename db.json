@@ -1,0 +1,262 @@
+{
+  "signup": [
+    {
+      "id": 1,
+      "name": "Admin",
+      "phoneno": "8309509802",
+      "loc": "Hyderabad",
+      "email": "admin@gmail.com",
+      "password": "Mukta2000*",
+      "cart": [
+        {
+          "id": 2,
+          "category": "electronics",
+          "image": "https://purepng.com/public/uploads/large/apple-watch-pcq.png",
+          "title": "Apple Watch",
+          "description": "The most advanced Apple Watch yet, featuring the Always-On Retina display, the ECG app, international emergency calling, fall detection and a built‑in compass.",
+          "price": 40900,
+          "total": 40900,
+          "aquant": 3,
+          "rating": 4,
+          "color": "black",
+          "quantity": 1
+        },
+        {
+          "id": 3,
+          "category": "electronics",
+          "image": "https://pngimg.com/uploads/macbook/macbook_PNG8.png",
+          "title": "Macbook Pro",
+          "description": "Designed for those who defy limits and change the world, the new MacBook Pro is by far the most powerful notebook we’ve ever made. it’s the ultimate pro notebook for the ultimate user",
+          "price": 199900,
+          "total": 199900,
+          "aquant": 7,
+          "rating": 2,
+          "color": "black",
+          "quantity": 1
+        },
+        {
+          "id": 6,
+          "category": "fashion",
+          "image": "https://shaye.co.in/media/catalog/product/cache/9d0df6da185847a889b25b0d66162244/a/a/aa03-2_1.jpg",
+          "title": "Peacock Cinched Shirt Jacket",
+          "description": "A button-down shirt, with a tie at the waist",
+          "price": 1837,
+          "total": 7348,
+          "aquant": 12,
+          "rating": 4,
+          "color": "multicolor",
+          "quantity": 4
+        },
+        {
+          "id": 5,
+          "category": "electronics",
+          "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-pro-12-select-wifi-spacegray-202003_FMT_WHH?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1583553704156",
+          "title": "iPad pro",
+          "description": "It’s a magical piece of glass. It’s so fast most PC laptops can’t catch up. And you can use it with touch, pencil, keyboard and now trackpad. It’s the new iPad Pro.",
+          "price": 71900,
+          "total": 215700,
+          "aquant": 8,
+          "rating": 3,
+          "color": "white",
+          "quantity": 3
+        }
+      ],
+      "category": []
+    },
+    {
+      "id": 2,
+      "name": "MuktaMaddipatla",
+      "phoneno": "8309509802",
+      "loc": "Hyderabad",
+      "email": "maddipatla.mukta@mtxb2b.com",
+      "password": "Mukta2000*",
+      "cart": [
+        {
+          "id": 1,
+          "category": "electronics",
+          "image": "https://images.macrumors.com/t/CcvDxp2MzMIcxDAYEygpzzUEkJs=/400x0/article-new/2020/04/AirPods-PRo-isolated.png?lossy",
+          "title": "Airpods Pro",
+          "description": "AirPods Pro have been designed to deliver active Noise Cancellation for immersive sound. Transparancy mode so much can hear your surroundings.",
+          "price": 24900,
+          "total": 49800,
+          "aquant": 10,
+          "rating": 3,
+          "color": "white",
+          "quantity": 2
+        },
+        {
+          "id": 3,
+          "category": "electronics",
+          "image": "https://pngimg.com/uploads/macbook/macbook_PNG8.png",
+          "title": "Macbook Pro",
+          "description": "Designed for those who defy limits and change the world, the new MacBook Pro is by far the most powerful notebook we’ve ever made. it’s the ultimate pro notebook for the ultimate user",
+          "price": 199900,
+          "total": 399800,
+          "aquant": 7,
+          "rating": 2,
+          "color": "black",
+          "quantity": 2
+        },
+        {
+          "id": 5,
+          "category": "electronics",
+          "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-pro-12-select-wifi-spacegray-202003_FMT_WHH?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1583553704156",
+          "title": "iPad pro",
+          "description": "It’s a magical piece of glass. It’s so fast most PC laptops can’t catch up. And you can use it with touch, pencil, keyboard and now trackpad. It’s the new iPad Pro.",
+          "price": 71900,
+          "total": 71900,
+          "aquant": 8,
+          "rating": 3,
+          "color": "white",
+          "quantity": 1
+        },
+        {
+          "id": 8,
+          "category": "fashion",
+          "image": "https://admintcns.wforwoman.com/product/21FESP10598-113831/665/21FESP10598-113831.jpg",
+          "title": "Light green flared dress",
+          "description": "Light green flared dress in round neck paired with matching soft mesh drape.",
+          "price": 5999,
+          "total": 11998,
+          "aquant": 8,
+          "rating": 4,
+          "color": "green",
+          "quantity": 2
+        }
+      ],
+      "category": []
+    },
+    {
+      "id": 3,
+      "name": "Laasya",
+      "phoneno": "9765434567",
+      "loc": "chennai",
+      "email": "mukta.maddipatla5@gmail.com",
+      "password": "",
+      "cart": [],
+      "category": []
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "category": "electronics",
+      "image": "https://images.macrumors.com/t/CcvDxp2MzMIcxDAYEygpzzUEkJs=/400x0/article-new/2020/04/AirPods-PRo-isolated.png?lossy",
+      "title": "Airpods Pro",
+      "description": "AirPods Pro have been designed to deliver active Noise Cancellation for immersive sound. Transparancy mode so much can hear your surroundings.",
+      "price": 24900,
+      "total": 24900,
+      "aquant": 10,
+      "rating": 3,
+      "color": "white"
+    },
+    {
+      "id": 2,
+      "category": "electronics",
+      "image": "https://purepng.com/public/uploads/large/apple-watch-pcq.png",
+      "title": "Apple Watch",
+      "description": "The most advanced Apple Watch yet, featuring the Always-On Retina display, the ECG app, international emergency calling, fall detection and a built‑in compass.",
+      "price": 40900,
+      "total": 40900,
+      "aquant": 3,
+      "rating": 4,
+      "color": "black"
+    },
+    {
+      "id": 3,
+      "category": "electronics",
+      "image": "https://pngimg.com/uploads/macbook/macbook_PNG8.png",
+      "title": "Macbook Pro",
+      "description": "Designed for those who defy limits and change the world, the new MacBook Pro is by far the most powerful notebook we’ve ever made. it’s the ultimate pro notebook for the ultimate user",
+      "price": 199900,
+      "total": 199900,
+      "aquant": 7,
+      "rating": 2,
+      "color": "black"
+    },
+    {
+      "id": 4,
+      "category": "electronics",
+      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-11-pro-midnight-green-select-2019?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1566954990073",
+      "title": "iPhone 11 pro",
+      "description": "A mind‑blowing chip that doubles down on machine learning and pushes the boundaries of what a smartphone can do. Welcome to the first iPhone powerful enough to be called Pro.",
+      "price": 106600,
+      "total": 106600,
+      "aquant": 5,
+      "rating": 1,
+      "color": "black"
+    },
+    {
+      "id": 5,
+      "category": "electronics",
+      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-pro-12-select-wifi-spacegray-202003_FMT_WHH?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1583553704156",
+      "title": "iPad pro",
+      "description": "It’s a magical piece of glass. It’s so fast most PC laptops can’t catch up. And you can use it with touch, pencil, keyboard and now trackpad. It’s the new iPad Pro.",
+      "price": 71900,
+      "total": 71900,
+      "aquant": 8,
+      "rating": 3,
+      "color": "white"
+    },
+    {
+      "id": 6,
+      "category": "fashion",
+      "image": "https://shaye.co.in/media/catalog/product/cache/9d0df6da185847a889b25b0d66162244/a/a/aa03-2_1.jpg",
+      "title": "Peacock Cinched Shirt Jacket",
+      "description": "A button-down shirt, with a tie at the waist",
+      "price": 1837,
+      "total": 1837,
+      "aquant": 12,
+      "rating": 4,
+      "color": "multicolor"
+    },
+    {
+      "id": 7,
+      "category": "fashion",
+      "image": "https://wforwoman.gumlet.io/product/21FEW30423-213870/665/20FEW30423-213870_1.JPG?w=576&amp;dpr=2.0",
+      "title": "Yellow Gathered Top",
+      "description": "Yellow gathered top with embroidered yoke in key hole neckline and three-quarter sleeves.",
+      "price": 1139,
+      "total": 1139,
+      "aquant": 6,
+      "rating": 5,
+      "color": "yellow"
+    },
+    {
+      "id": 8,
+      "category": "fashion",
+      "image": "https://admintcns.wforwoman.com/product/21FESP10598-113831/665/21FESP10598-113831.jpg",
+      "title": "Light green flared dress",
+      "description": "Light green flared dress in round neck paired with matching soft mesh drape.",
+      "price": 5999,
+      "total": 5999,
+      "aquant": 8,
+      "rating": 4,
+      "color": "green"
+    },
+    {
+      "id": 9,
+      "category": "fashion",
+      "image": "https://wforwoman.gumlet.io/product/20AUW14644-116401/665/20AUW14644-116401_1.JPG?w=576&amp;dpr=2.0",
+      "title": "Light Blue Printed Kurta",
+      "description": "Light blue printed straight kurta with placket and pleat details in mandarin collar.",
+      "price": 1599,
+      "total": 1599,
+      "aquant": 4,
+      "rating": 4,
+      "color": "blue"
+    },
+    {
+      "id": 10,
+      "category": "fashion",
+      "image": "https://wforwoman.gumlet.io/product/20AUSP10569-214083/665/20AUSP10569-214083.jpg?w=576&amp;dpr=2.0",
+      "title": "Olive Green Embroidered Kurta-Sharara Set",
+      "description": "Olive green embroidered short kurta in round neck, paired with matching gathered sharara.",
+      "price": 6999,
+      "total": 6999,
+      "aquant": 3,
+      "rating": 5,
+      "color": "green"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+<head>
+    <style>
+        .navbar{
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+    </style>
+</head>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <img src="https://media-exp1.licdn.com/dms/image/C560BAQEKHDdA_-drZA/company-logo_200_200/0/1635737504002?e=1645660800&amp;v=beta&amp;t=iP8zhNHWLvA_E0NnoqBExFZ-itZ2KdLpKFzOuhFPIkw" style="height: 100px;width:100px" loading="lazy" alt="MTX Group logo" id="ember46" class="lazy-image ember-view org-top-card-primary-content__logo">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <div class="container green borderXwidth">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" routerLink="./home">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" routerLink="./about">Why Choose Us?</a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" routerLink="./services">Services</a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" routerLink="./userdetails1">User Details</a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" routerLink="./contact">Contact</a>
+                </li>
+                <li class=" btn-primary nav-item text-white" role="button">
+                    <a class="nav-link text-white" (click)="logout()">Logout</a>
+                </li>
+            </ul>
+        </div>
+        
+        </div>
+    </div>
+</nav>
+

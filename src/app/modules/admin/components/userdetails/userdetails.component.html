@@ -1,0 +1,79 @@
+<header>
+  <h1 class="pt-3 pb-4 text-center font-bold font-up deep-purple-text">User Details</h1>
+</header>
+<p align="right">
+  <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin-right:70px;" class="btn btn-success">Add New User Record</button>
+ </p>
+<body>
+  <form action="javascript:" class="search-bar">
+    <input type="search" name="search" pattern=".*\S.*" required [(ngModel)]="searchKey" placeholder="Search Users by Name...">
+    <button class="search-btn" type="submit">
+      <span>Search</span>
+    </button>
+  </form>
+
+    <div class="container table-responsive py-5">
+  <table class="table table-bordered table-hover mt-3">
+      <thead class="thead-dark">
+          <th scope="col">Name</th>
+          <th scope="col">Phone No.</th>
+          <th scope="col">Location</th>
+          <th scope="col">Email</th>
+          <th scope="col">Actions</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of userData|filter:searchKey">
+            <td>{{row.name}}</td>
+            <td>{{row.phoneno}}</td>
+            <td>{{row.loc}}</td>
+            <td>{{row.email}}</td>
+            <td>
+                <button (click)="editPolicy(row)" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-info">Edit</button>
+                <button (click)="deleteEmployee(row)" class="btn btn-danger mx-3" >Delete</button>
+            </td>
+      </tr>
+      </tbody>
+  </table>
+
+ <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="exampleModalLabel">User Details</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formValue">
+          <div class="mb-3">
+            <label for="User Name">User Name</label>
+            <input type="text" formControlName="name" class="form-control" id="name" placeholder="Enter User's Name..">
+          </div>
+          <div class="mb-3">
+            <label for="Phone No.">User's Phone No.</label>
+            <input type="text" formControlName="phoneno" class="form-control" id="phoneno" placeholder="Enter User's Phone No..">
+          </div>
+          <div class="mb-3">
+            <label for="Location">Location</label>
+            <input type="text" formControlName="loc" class="form-control" id="loc" placeholder="Enter User's Location..">
+          </div>
+          <div class="mb-3">
+            <label for="Email">User's Email</label>
+            <input type="text" formControlName="email" class="form-control" id="email" placeholder="Enter Email Address..">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" *ngIf="showUpdate" (click)="updatePolicy()" class="btn btn-primary">Update</button>
+              <button type="button" *ngIf="showAdd" (click)="postPolicyDetails()" class="btn btn-primary">Add</button>
+              <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<br>
+<br>
+</body>
+

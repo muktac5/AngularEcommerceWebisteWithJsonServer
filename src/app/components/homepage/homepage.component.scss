@@ -1,0 +1,112 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+
+// Function to convert px units to rem
+// https://css-tricks.com/snippets/sass/px-to-em-functions/
+@function rem($pixels, $context: 16) {
+	@return ($pixels / $context) * 1rem;
+}
+
+// Colors and fonts variables
+:root {
+	--white: hsl(0, 0%, 100%);
+	--card-blue: hsl(219, 30%, 18%);
+	--bg-blue: hsl(216, 53%, 9%);
+	--base-font: "Open Sans", sans-serif;
+}
+
+// Reset styles and also used Normalize
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body1 {
+	color: var(--white);
+	background-color: var(--bg-blue);
+	font-family: var(--base-font);
+	
+	// Center the container
+	width: 100vw;
+	min-height: 100vh;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	
+	img {
+		max-width: 100%;
+		vertical-align: bottom;
+	}
+}
+
+// Card
+.testimonial {
+	background-color: var(--card-blue);
+	border-radius: 5px;
+	padding: 40px 25px 25px;
+	flex-grow: 1;
+	flex-basis: 280px;
+	max-width: 360px;
+	position: relative;
+	
+	// Fonts 	
+	&__text {
+		font-weight: normal;
+		font-size: rem(14);
+		line-height: 21px;
+		margin-bottom: rem(25);
+	}
+	
+	&__job {
+		font-weight: normal;
+		font-size: rem(8);
+		line-height: 10px;
+		letter-spacing: 0.5px;
+	}
+	
+	&__name {
+		font-weight: bold;
+		font-size: rem(10);
+		line-height: 12px;
+		letter-spacing: 0.5px;
+		margin-bottom: 5px;
+	}
+
+	// Bottom layout
+	&__img {
+		display: inline-block;
+		width: 30px;
+		margin-right: 10px;
+
+		img {
+			vertical-align: bottom;
+			border-radius: 50%;
+		}
+	}
+
+	&__info {
+		display: inline-block;
+	}
+}	
+
+// General Styles
+.container {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	
+	// Specific Styles
+	&--testimonials {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 25px 40px;
+		justify-content: center;
+		padding: 45px 45px 90px;
+
+		@media (min-width: 78.125em) {
+			padding: 0;
+			max-width: 1160px;
+		}
+	}
+}

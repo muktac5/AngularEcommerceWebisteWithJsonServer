@@ -1,0 +1,732 @@
+<head>
+  <meta charset="UTF-8">
+<meta name="description" content="Free Web tutorials">
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="author" content="John Doe">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<style>
+.navbar{
+  margin-top:0;
+padding:0;
+display: flex;
+justify-content:center;
+align-items:center;
+height:10vh;
+background: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
+}
+body {
+font-family: Roboto, Helvetica, Arial, sans-serif;
+height: auto;
+background-color: red; /* For browsers that do not support gradients */
+background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
+}
+ul{
+margin:0;
+padding:0;
+display:flex;
+}
+
+ul li{
+list-style:none;
+margin:0 20px;
+transition:0.5s;
+}
+.carousel-caption{
+      left: 65%;
+  }
+  h3{
+      font-size: 70px;
+      color:lightskyblue;
+     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  p{
+    font-size: 20px;
+    color:black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  h2{
+    font-size: 25px;
+    color:black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+
+
+ul li a{
+display: block;
+position:relative;
+text-decoration:none;
+padding:5px;
+font-size:18px;
+font-family: sans-serif;
+color:#fff;
+text-transform:uppercase;
+transition:0.5s;
+}
+
+ul:hover li a{
+transform:scale(1);
+opacity:0.2;
+filter:blur(5px);
+}
+
+ul li a:hover{
+transform:scale(1.5);
+opacity:1;
+filter:blur(0);
+text-decoration:none;
+color:#fff;
+}
+
+ul li a:before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#ff497c;
+transition:0.5s;
+transform-origin:right;
+transform:scaleX(0);
+z-index:-1;
+}
+
+ul li a:hover:before{
+transition:transform 0.5s;
+transform-origin:left;
+transform:scaleX(1);
+}
+
+.testimonials-clean {
+  color:black;
+  background: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
+}
+
+.testimonials-clean p {
+  color:black;
+}
+
+.testimonials-clean h2 {
+  font-weight:bold;
+  margin-bottom:40px;
+  padding-top:40px;
+  color:inherit;
+}
+.contact h2{
+  font-weight:bold;
+  text-align: center;
+  margin-bottom:40px;
+  padding-top:40px;
+}
+
+@media (max-width:767px) {
+  .testimonials-clean h2 {
+    margin-bottom:25px;
+    padding-top:25px;
+    font-size:24px;
+    
+  }
+}
+
+.testimonials-clean .intro {
+  font-size:16px;
+  max-width:500px;
+  margin:0 auto;
+  
+}
+
+.testimonials-clean .intro p {
+  margin-bottom:0;
+}
+
+.testimonials-clean .people {
+  padding:50px 0 20px;
+}
+
+.testimonials-clean .item {
+  margin-bottom:32px;
+  
+}
+
+@media (min-width:768px) {
+  .testimonials-clean .item {
+    height:220px;
+  }
+}
+
+.testimonials-clean .item .box {
+  padding:30px;
+  margin:5px;
+  background-color:#fff;
+  position:relative;
+  border-radius: 4px;
+  
+}
+
+.testimonials-clean .item .box:after {
+  content:'';
+  position:absolute;
+  left:30px;
+  bottom:-24px;
+  width:0;
+  height:0;
+  border:15px solid transparent;
+  border-width:12px 15px;
+  border-top-color:#fff;
+}
+
+.testimonials-clean .item .author {
+  margin-top:28px;
+  padding-left:25px;
+  color:white;
+}
+
+.testimonials-clean .item .name {
+  font-weight:bold;
+  margin-bottom:2px;
+  color:inherit;
+}
+
+.testimonials-clean .item .title {
+  font-size:13px;
+  color:black;
+}
+
+.testimonials-clean .item .description {
+  font-size:15px;
+  margin-bottom:0;
+}
+
+.testimonials-clean .item img {
+  max-width:40px;
+  float:left;
+  margin-right:12px;
+  margin-top:-5px;
+}
+
+.section .contact {
+    background-color: #444442;
+    padding-top: 85px;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif, 'arial';
+    font-weight: 400;
+    font-size: 50px;
+    color:black;
+    text-align: center;
+}
+
+h4 {
+    font-family: 'Roboto', sans-serif, 'arial';
+    font-weight: 400;
+    font-size: 20px;
+    color: #9b9b9b;
+    line-height: 1.5;
+}
+
+/* ///// inputs /////*/
+
+input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid ~ label {
+    font-size: 0.75em;
+    color: #999;
+    top: -5px;
+    -webkit-transition: all 0.225s ease;
+    transition: all 0.225s ease;
+}
+
+.styled-input {
+    float: left;
+    width: 293px;
+    margin: 1rem 0;
+    position: relative;
+    border-radius: 4px;
+}
+
+@media only screen and (max-width: 768px){
+    .styled-input {
+        width:100%;
+    }
+
+    
+}
+.about{
+	cursor: pointer;
+	background-color: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
+	color: #FFFFFF;
+	padding-top: 20px;
+	padding-bottom: 30px;
+}
+.about h1 {
+	padding: 10px 0;
+	margin-bottom: 20px;
+}
+.about h2 {
+	opacity: .8;
+}
+.about span {
+	display: block;
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+	margin:auto;
+	border-radius:50%;  
+	font-size: 40px;
+	color: #FFFFFF;
+	opacity: 0.7;
+	background-color: #4C0822;
+	border: 2px solid #4C0822;
+
+	webkit-transition:all .5s ease;
+ 	moz-transition:all .5s ease;
+ 	os-transition:all .5s ease;
+ 	transition:all .5s ease;
+
+}
+.about-item:hover span{
+	opacity: 1;	
+	border: 2px solid #CC0039;
+	font-size: 42px;
+	-webkit-transform: scale(1.1,1.1) rotate(360deg) ;
+	-moz-transform: scale(1.1,1.1) rotate(360deg) ;
+	-o-transform: scale(1.1,1.1) rotate(360deg) ;
+	transform: scale(1.1,1.1) rotate(360deg) ;
+}
+.about-item:hover h2{
+	opacity: 1;
+	-webkit-transform: scale(1.1,1.1)  ;
+	-moz-transform: scale(1.1,1.1)  ;
+	-o-transform: scale(1.1,1.1)  ;
+	transform: scale(1.1,1.1) ;
+}
+.about .lead{
+	color: #CC0039;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+
+.styled-input label {
+    color: #999;
+    padding: 1.3rem 30px 1rem 30px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    pointer-events: none;
+}
+
+.styled-input.wide { 
+    width: 650px;
+    max-width: 100%;
+}
+
+input,
+textarea {
+    padding: 30px;
+    border: 0;
+    width: 100%;
+    font-size: 1rem;
+    background-color: #2d2d2d;
+    color: white;
+    border-radius: 4px;
+}
+
+input:focus,
+textarea:focus { outline: 0; }
+
+input:focus ~ span,
+textarea:focus ~ span {
+    width: 100%;
+    -webkit-transition: all 0.075s ease;
+    transition: all 0.075s ease;
+}
+
+textarea {
+    width: 100%;
+    min-height: 15em;
+}
+
+.input-container {
+    width: 650px;
+    max-width: 100%;
+    margin: 20px auto 25px auto;
+}
+
+.submit-btn {
+    padding: 7px 35px;
+    border-radius: 60px;
+    display: inline-block;
+    background-color: #4b8cfb;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.06),
+              0 2px 10px 0 rgba(0,0,0,0.07);
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+
+.submit-btn:hover {
+    transform: translateY(1px);
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.10),
+              0 1px 1px 0 rgba(0,0,0,0.09);
+}
+
+@media (max-width: 768px) {
+    .submit-btn {
+        width:100%;
+        float: none;
+        text-align:center;
+    }
+}
+
+input[type=checkbox] + label {
+  color: #ccc;
+  font-style: italic;
+} 
+
+input[type=checkbox]:checked + label {
+  color: #f00;
+  font-style: normal;
+}
+
+hr.rounded {
+  border-top: 8px solid #bbb;
+  border-radius: 5px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer1{
+  display: flex;
+  background: #333;
+  justify-content: flex-end;
+  align-items: flex-end;
+  min-height: 5vh;
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+  background: #3586ff;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-icon,
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.menu__link {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+.menu__link:hover {
+  opacity: 1;
+}
+
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("https://i.ibb.co/wQZVxxk/wave.png");
+  background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+.widget .no-box.widget-title h2{
+  text-align: center;
+}
+
+
+
+</style>
+</head>
+<body>
+
+  
+<nav class="navbar">
+  <ul>
+    <li><a routerLink="/homepage">Home</a></li>
+    <li><a href="../admin/services">Services</a></li>
+    <li><a routerLink="/login2">Login/Signup</a></li>
+ </ul>
+</nav>
+
+  <ngb-carousel>
+  <ng-template ngbSlide id="sliderOne">
+      <div class="aspect-ratio-image__container">
+          <img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Blog_banner_desktop3x.max-1000x1000.png" alt="Article's hero media" class="aspect-ratio-image__image">
+        </div>
+      <div class="carousel-caption">
+          <h3>MTX</h3>
+          <p>Online Shopping for Electronics, Apparel, Books &amp; more</p>
+      </div>
+  </ng-template>
+
+  <ng-template ngbSlide id="sliderTwo">
+    <div class="aspect-ratio-image__container">
+    <img src="https://www.shoplocaledinburgh.co.uk/wp-content/uploads/2020/06/shop-local-website-banner-1.png"alt="Sell Your Products Online" bdt-cover="" class="bdt-cover" style="height: 400px; width: 1500px;">
+  </div>
+    <div class="carousel-caption">
+        <h2>Everything Delivered to your Doorstep with one click.</h2>
+    </div>
+</ng-template>
+
+<ng-template ngbSlide id="sliderThree">
+  <div class="aspect-ratio-image__container">
+    <img src="https://static.fibre2fashion.com/articleresources/images/7/626/online-shopping-information.jpg" class="img-responsive" alt="Online Shopping Information" title="Online Shopping Information" style="height: 400px; width: 1500px;">
+  </div>
+  <div class="carousel-caption">
+      <h2>We accept all kinds of payment, COD, Net Banking, Credit and Debit cards.</h2>
+  </div>
+</ng-template>
+
+</ngb-carousel>
+
+<hr class="rounded">
+
+
+
+<section class="text-center about">
+  <h2 id="aboutus"><b>About Us</b></h2>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-sm-6 col-ex-12 about-item wow lightSpeedIn" data-wow-offset="200" >
+        <span class="fa fa-group"></span>
+        <h2>Motto</h2>
+        <p class="lead">We are a group of individuals who are dedicated to serve you with the product delivery at any time and any day. We deliver across the country.</p>
+      </div>
+      <div class="col-lg-4 col-sm-6 col-ex-12 about-item wow lightSpeedIn" data-wow-offset="200">
+        <span class="fa fa-info"></span>
+        <h2>Product's Available</h2>
+        <p class="lead">We deliver product's of all kinds. Ranging from electronics to Fashion,Vegetables to Body products etc. We have a variety of brands in each product type.</p>
+      </div>
+      <div class="clearfix visible-md-block visible-sm-block"></div>
+      <div class="col-lg-4 col-sm-6 col-ex-12 about-item wow lightSpeedIn" data-wow-offset="200">
+        <span class="fa fa-file"></span>
+        <h2>Payment Modes</h2>
+        <p class="lead">We accept all kinds of payment: Internet Banking,COD,Credit card,Debit Card etc..</p>
+      </div>
+      
+    </div>
+    
+  </div>
+</section>
+
+<hr class="rounded">
+
+<div class="testimonials-clean">
+  <div class="container">
+      <div class="intro">
+          <h2 id="testimonials" class="text-center">Testimonials </h2>
+          <p class="text-center">Our customers love us! Read what they have to say below.</p>
+      </div>
+      <div class="row people">
+          <div class="col-md-6 col-lg-4 item">
+              <div class="box">
+                  <p class="description">MTX Group Inc. helped us to take our Salesforce project to places we never would have gone without them.MTX employees built trusting relationships.</p>
+              </div>
+              <div class="author"><img class="rounded-circle" src="https://i.imgur.com/nUNhspp.jpg">
+                  <h5 class="name">Donna Cohen</h5>
+                  <p class="title">EEC,Massachusetts</p>
+              </div>
+          </div>
+          <div class="col-md-6 col-lg-4 item">
+              <div class="box">
+                  <p class="description">They brought expertise, competence, patience, flexibility and creativity to the table.The launch of our project was a complete success thanks to the people of MTX.</p>
+              </div>
+              <div class="author"><img class="rounded-circle" src="https://i.imgur.com/o5uMfKo.jpg">
+                  <h5 class="name">Carl Kent</h5>
+                  <p class="title">VC, Dallas Metro Corporation</p>
+              </div>
+          </div>
+          <div class="col-md-6 col-lg-4 item">
+              <div class="box">
+                  <p class="description">Their involvement did not end just end at the delivery of the project. They went on to provide our user base with expert guidance, training and support which is commendable.</p>
+              </div>
+              <div class="author"><img class="rounded-circle" src="https://i.imgur.com/At1IG6H.png">
+                  <h5 class="name">Emily Clark</h5>
+                  <p class="title">Chairman, New York City Police</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<hr class="rounded">
+<br>
+
+<section class="contact">
+<div class="container">
+	<div class="row">
+			<h2 id="contactus">Contact Us</h2>
+	</div>
+	<div class="row">
+			<h4 style="text-align:center">We'd love to hear from you!</h4>
+	</div>
+	<div class="row input-container">
+			<div class="col-xs-12">
+				<div class="styled-input wide">
+					<input type="text" required />
+					<label>Name</label> 
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-12">
+				<div class="styled-input">
+					<input type="text" required />
+					<label>Email</label> 
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-12">
+				<div class="styled-input" style="float:right;">
+					<input type="text" required />
+					<label>Phone Number</label> 
+				</div>
+			</div>
+			<div class="col-xs-12">
+				<div class="styled-input wide">
+					<textarea required></textarea>
+					<label>Message</label>
+				</div>
+			</div>
+			<div class="col-xs-12">
+				<a href="mailto:maddipatlamukta@gmail.com"><button class="btn-lrg submit-btn">Send Message</button></a>
+			</div>
+	</div>
+</div>
+</section>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<section class="footer1">
+  <footer class="footer">
+    <div class="waves">
+      <div class="wave" id="wave1"></div>
+      <div class="wave" id="wave2"></div>
+      <div class="wave" id="wave3"></div>
+      <div class="wave" id="wave4"></div>
+
+      <h2>Connect With Us</h2>
+                  <a href="https://www.facebook.com/mtxb2b/"> <i class="fa fa-facebook fa-3x mx-3"> </i> </a>
+                  <a href="https://twitter.com/mtx_inc?lang=en"> <i class="fa fa-twitter fa-3x mx-3"> </i> </a>
+                  <a href="https://www.youtube.com/channel/UCBORpF8nKdNxJTyYmOi771w"> <i class="fa fa-youtube fa-3x mx-3"> </i> </a>
+    </div>
+
+      <p>&copy;2021 MTX,Inc | All Rights Reserved</p>
+  </footer>
+
+</section>
+  
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>  
+</body>

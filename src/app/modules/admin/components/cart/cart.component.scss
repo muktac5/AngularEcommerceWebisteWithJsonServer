@@ -1,0 +1,93 @@
+.card {
+    height: 60vh;
+    margin: 25px;
+    padding: 25px;
+}
+
+.center img {
+    text-decoration: none;
+    color: inherit;
+    border: none;
+    outline: none;
+    height: 162px;
+    width: 250px;
+    margin: 20px 0px;
+}
+
+h4,
+h6 {
+    font-weight: 400;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.card-table {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: none;
+    height: auto;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: .25rem;
+}
+
+.center .btn {
+    font-size: 14px !important;
+    margin-top: 20px !important;
+    font-weight: 400;
+    padding: 12px 72px;
+    border-radius: 3px !important;
+}
+.shopbtn{
+
+    background: linear-gradient(to right bottom, #4db8ff, #ff4dc4) !important;
+    border-radius: 4px;
+}
+
+.shopbtn:hover{
+
+    background: linear-gradient(to right bottom, #ff4dc4, #4db8ff) !important;
+}
+
+.cobtn{
+background-image: linear-gradient(to right, #f6d365 0%, #fda085 51%, #f6d365 100%);
+}
+
+.cobtn:hover{
+    background-image: linear-gradient(to right, #fda085 0%, #f6d365 51%,#f6d365 100%);
+ 
+}
+.ecbtn{
+    background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);  
+    width: 100px;
+}
+.ecbtn:hover{
+    background-position: right center;
+}
+
+.smbtn{
+
+    background-image:linear-gradient(to right, #00d2ff 0%, #3a7bd5 51%, #00d2ff 100%);
+    width: 100px;
+}
+
+.smbtn:hover{
+    background-position: right center;
+}
+
+.sbtn{
+    text-align: center;
+    height: 30px;
+}
+
+
+

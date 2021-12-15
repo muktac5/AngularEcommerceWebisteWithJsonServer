@@ -1,0 +1,207 @@
+<head>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
+        .form-control{
+            border-radius: 3px;
+            width:600px;
+            margin-left: 20px;
+        }
+        .search-icon{
+            position: absolute;
+            z-index: 30;
+            right:53%;
+            top:20px;
+            color:blue; 
+        }
+        p{
+            text-align: center;
+        }
+        .example-container {
+          background: linear-gradient(to right bottom, #4db8ff, #ff4dc4); 
+        }
+
+        .example-sidenav-content {
+          display: flex;
+          height: 100%;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .example-sidenav {
+          padding:20px;
+        }
+        .slider{
+          width:275px;
+        }
+        .filter{
+          padding-top: 1em;
+          border: 2px solid black;
+          border-radius: .25rem;
+        }
+        .ul_checkbox ul{
+          padding-left: 0%;
+        }
+        .ul_checkbox ul li{
+          list-style-type: none;
+        }
+        .ul_checkbox ul li input{
+          margin: 4px;
+        }
+
+    </style>
+</head>
+<header>
+    <div class="navbar shadow-sm">
+      <div class="navbar-brand align-item-center d-flex">
+        <img src="https://media-exp1.licdn.com/dms/image/C560BAQEKHDdA_-drZA/company-logo_200_200/0/1635737504002?e=1645660800&amp;v=beta&amp;t=iP8zhNHWLvA_E0NnoqBExFZ-itZ2KdLpKFzOuhFPIkw" style="height: 50px;width:50px" loading="lazy" alt="MTX Group logo" id="ember46" class="lazy-image ember-view org-top-card-primary-content__logo">
+        <div class="form-group">
+            <div class="input-group mb-4 border rounded-pill p-1">
+            <div class="input-group-prepend border-0">
+                <button id="button-addon4" type="button" class="btn btn-link text-info"><i class="fa fa-search"></i></button>
+              </div>
+              <input type="search" class="form-control" (keyup)="search($event)" [(ngModel)]="searchKey" placeholder="Search Products.." aria-describedby="button-addon4" class="form-control bg-none border-0">
+              </div>
+            </div>
+            </div>
+      <button routerLink="../cart" class="addtocart btn btn-primary">CART
+          <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
+      </button> 
+    </div>
+</header>
+<body>
+<div class="card-top container-fluid">
+    <div class="container d-flex">
+        <div class="item">
+            <a (click)="filter('')"> 
+                <img src="https://www.nicepng.com/png/full/253-2534370_png-file-shopping-cart-line-icon.png" style="padding-top: 1em;" alt="">
+                <h3>All products</h3>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('electronics')">
+                <img src="https://vtechsl.com/image/catalog/logo/allp.png" style="width: 130px;padding-top: 1em;">
+                <h3>Electronics</h3>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('fashion')">
+                <img src="https://www.seekpng.com/png/detail/98-980266_clothing-png-image-transparent-apparel-product.png" style="width: 130px;padding-top: 1em;" alt="Clothing Png Image Transparent - Apparel Product, transparent png download" title="Clothing Png Image Transparent - Apparel Product , transparent png download">
+                <h3>Fashion</h3>
+            </a>
+        </div>
+    </div>
+</div>
+
+<mat-drawer-container class="example-container" style="height:100%;width:100%;color: linear-gradient(to right bottom, #4db8ff, #ff4dc4);"> 
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <div class="filter">
+    <p style="font-size: 30px;">Filter<i class="fas fa-filter"></i></p>
+  </div>
+    <br>
+    <br>
+    <p>{{minPrice}}</p>
+    <p style="text-align: left;">Price</p>
+    <ngx-slider class="slider"[(value)]="minValue" (mouseup)="filterByRange()" [(highValue)]="maxValue" [options]="options"></ngx-slider>
+    <br>
+    <br>
+    <p style="text-align: left;">Color</p>
+    <div class="container">
+      <div class=ul_checkbox>
+      <ul>
+        <li *ngFor="let checkboxitem of checkboxarray">
+          <input type="checkbox" value={{checkboxitem.color}} (change)="onChange($event)">{{checkboxitem.color}}
+        </li>
+      </ul>
+    </div>
+    </div>
+
+    <!-- <input type="checkbox" (change)="tempcolorpick('green',$event)" ><b style="background: green;margin: 0.5em;">Green</b><br>
+    <input type="checkbox" (change)="tempcolorpick('white',$event)"><b style="background: black;color: white;margin: 0.5em;">White</b><br>
+    <input type="checkbox"><b style="background: white;color: black;margin: 0.5em;">Black</b><br>
+    <input type="checkbox"><b style="background: yellow;margin: 0.5em;">Yellow</b><br>
+    <input type="checkbox"><b style="background: lightskyblue;margin: 0.5em;">Blue</b><br>
+    <input type="checkbox"><b style="background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);margin: 0.5em;">MultiColor</b>
+    -->
+    <br>
+    <br>
+    <p style="text-align: left;">Sort by Rating</p>
+    <input type="checkbox" value=5 (change)="onChangeOfRating($event)">
+    <ngb-rating [rate]=5 [readonly]='true'>
+      <ng-template let-fill="fill" let-index="index">
+      <span class="star" [class.filled]="fill === 100">&#9733;</span>
+    </ng-template>
+    </ngb-rating> 
+    <br>
+    <input type="checkbox" value=4 (change)="onChangeOfRating($event)">
+    <ngb-rating [rate]=4 [readonly]='true'>
+      <ng-template let-fill="fill" let-index="index">
+      <span class="star" [class.filled]="fill === 100">&#9733;</span>
+    </ng-template>
+    </ngb-rating> 
+    <br>
+    <input type="checkbox" value=3 (change)="onChangeOfRating($event)">
+    <ngb-rating [rate]=3 [readonly]='true'>
+      <ng-template let-fill="fill" let-index="index">
+      <span class="star" [class.filled]="fill === 100">&#9733;</span>
+    </ng-template>
+    </ngb-rating> 
+    <br>
+    <input type="checkbox" value=2 (change)="onChangeOfRating($event)">
+    <ngb-rating [rate]=2 [readonly]='true'>
+      <ng-template let-fill="fill" let-index="index">
+      <span class="star" [class.filled]="fill === 100">&#9733;</span>
+    </ng-template>
+    </ngb-rating> 
+    <br>
+    <input type="checkbox" value=1 (change)="onChangeOfRating($event)">
+    <ngb-rating [rate]=1 [readonly]='true'>
+      <ng-template let-fill="fill" let-index="index">
+      <span class="star" [class.filled]="fill === 100">&#9733;</span>
+    </ng-template>
+    </ngb-rating> 
+  </mat-drawer>
+  <div class="example-sidenav-content">
+    <button type="button" class="btn btn-primary" style="margin-top:2em;" (click)="drawer.toggle()">
+      Filter Products
+    </button>
+  </div>
+  <div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of colorfilteredlist | filter1:searchKey:'title'">
+            <div class="card col-md-3">
+              <div class="img-cont">
+                <img src="{{item.image}}" alt="">
+                <div class="overlay"></div>
+  <div class="button"><a routerLink="./{{item.id}}"> Product Details </a></div>
+              </div>
+                <h3 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;font-weight:bold;max-width: 300ch;">{{item.title}}</h3>
+                <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 300ch;">{{item.description}}</p>
+                <p><strong>Price:</strong> Rs. {{item.price}}</p>
+                <div class="items">
+                <div class="quantityadd">
+                    <button type="button" (click)="inc(item)" class="sbtn btn btn-primary mx-2"><i class="fa fa-plus"></i></button>
+                    <span>{{item.quantity}}</span>
+                    <button type="button" (click)="dec(item)" class="sbtn btn btn-primary mx-2"><i class="fa fa-minus"></i></button>
+                    </div>
+                    <ngb-rating [rate]="item.rating" [readonly]='true'>
+                      <ng-template let-fill="fill" let-index="index">
+                      <span class="star" [class.filled]="fill === 100">&#9733;</span>
+                    </ng-template>
+                    </ngb-rating> 
+                  </div>
+                    <br>
+                <button (click)="addtocart(item)" class="cartbtn btn btn-warning">Add to cart</button>
+            </div>
+            
+        </ng-container>
+
+    </div>
+</div>
+
+</mat-drawer-container>
+<br>
+<br>
+<br>
+
+
+</body>

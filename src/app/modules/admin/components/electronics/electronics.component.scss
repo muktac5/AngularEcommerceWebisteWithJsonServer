@@ -1,0 +1,238 @@
+.card-top{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word; 
+    background-clip: border-box;
+    border: 1px solid black;
+    border-radius: .25rem;
+
+}
+.card:hover {
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+
+.item img {
+    width: 100px;
+    height: 100px;
+}
+
+.item {
+    margin: 0px 15px;
+    text-align: center;
+
+}
+.quantityadd{
+    text-align: right;
+    margin-bottom: 10px;
+}
+.sbtn{
+    text-align: center;
+    height: 35px;
+
+}
+
+.imagedetails {
+    position: relative;
+    margin-top: 50px;
+    width: 500px;
+    height: 300px;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.5s ease;
+  }
+  
+  .imagedetails:hover .overlay {
+    display: block;
+    background: rgba(0, 0, 0, .3);
+  }
+  
+  .imagedetails img {
+    position: absolute;
+    width: 500px;
+    height: 300px;
+    left: 0;
+  }
+  
+  .imagedetails .title {
+    position: absolute;
+    width: 500px;
+    left: 0;
+    top: 120px;
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    z-index: 1;
+    transition: top .5s ease;
+  }
+  
+  .imagedetails:hover .title {
+    top: 90px;
+  }
+  
+  .imagedetails .button {
+    position: absolute;
+    width: 500px;
+    left:0;
+    top: 180px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity .35s ease;
+  }
+  
+  .imagedetails .button a {
+    width: 200px;
+    padding: 12px 48px;
+    text-align: center;
+    color: white;
+    border: solid 2px white;
+    z-index: 1;
+  }
+  
+  .imagedetails:hover .button {
+    opacity: 1;
+  }
+  
+  
+.item a:hover {
+    font-size: 15px;
+    color: blueviolet;
+}
+.item h3{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+.card {
+    padding: 20px;
+    margin: 40px;
+}
+
+.cartbtn:hover{ 
+    background-color: blue;
+    color:white;
+}
+
+.card img {
+    width: 100%;
+  height:300px;
+  border-top-left-radius:2px;
+  border-top-right-radius:2px;
+  display:block;
+    overflow: hidden;
+}
+
+.card img:hover {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+}
+body{
+    background: linear-gradient(to right bottom, #4db8ff, #ff4dc4);
+    height: auto;
+}
+.form-control::placeholder {
+    font-size: 0.95rem;
+    font-style: italic;
+    color:black;
+    
+  }
+  .form-group{
+      margin-left: 2em;
+      height: 10px;  }
+  input{
+      background-color: linear-gradient(to right bottom, #4db8ff, #ff4dc4) !important;
+      color: black!important;
+  }
+
+  .addtocart:hover{
+      background:green !important;
+  }
+
+  .button4{
+      margin-top: 2.5em;
+  }
+  #proj-cont{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center
+  }
+  .img-cont {
+    position: relative;
+    width: 250px;
+    height: 300px;
+  }
+  .img-cont .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.5s ease;
+  }
+  .img-cont:hover .overlay {
+    display: block;
+    background: rgba(0, 0, 0, .3);
+  }
+  .img-cont img {
+    position: absolute;
+    width: 250px;
+    height: 300px;
+    left: 0;
+    border-radius: 5px;
+    transition: all 1s;
+  }
+  .img-cont img:hover{
+    transform: scale(1.1);
+  }
+  .img-cont .title {
+    position: absolute;
+    width: 250px;
+    left: 0;
+    top: 120px;
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    z-index: 1;
+    transition: top .5s ease;
+  }
+  
+  .img-cont:hover .title {
+    top: 90px;
+  }
+  
+  .img-cont .button {
+    position: absolute;
+    width: 250px;
+    left:0;
+    top: 130px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity .35s ease;
+  }
+  
+  .img-cont .button a {
+    width: 200px;
+    padding: 12px 48px;
+    text-align: center;
+    color: white;
+    border: solid 2px white;
+    z-index: 1;
+    text-decoration: none;
+  }
+  
+  .img-cont:hover .button {
+    opacity: 1;
+  }
+  

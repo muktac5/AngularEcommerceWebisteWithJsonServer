@@ -1,0 +1,210 @@
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+<meta charset="ETF-8">
+<html>
+<head>
+<title>Home</title>
+<style>
+    html, body{
+  height: 100%;
+}
+
+body{
+  margin: 0;
+}
+
+header{
+  position: relative;
+  height: 100%;
+  background: linear-gradient(to right bottom, #4db8ff, #ff4dc4, #9900ff);
+  color: white;
+  font-family: arial;
+  overflow: hidden;
+}
+
+.details{
+  position: absolute;
+  top: 40%;
+  width: 40%;
+  margin-left: 10%;
+}
+
+h2{
+  margin-top: 30px;
+  margin-bottom: 50px;
+  font-size: 20px;
+  color: black;
+}
+
+h1{
+  margin: 10px 0;
+  font-size: 40px;
+}
+
+.button{
+  text-decoration: none;
+  color: white;
+  background: black;
+  padding: 15px 20px;
+  border: none;
+  font-size: 16px;
+  border-radius: 4px;
+  opacity: .55;
+}
+
+.button:hover{
+  color: black;
+  background: white;
+}
+
+img{
+  height: 90%;
+  width: 80%;
+}
+
+.image{
+  position: absolute;
+  top: 190px;
+  right: -100px;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+li a:hover{
+  opacity: .5;
+}
+ul{
+  float: right; 
+}
+
+ul li{
+  float: left;
+  list-style: none;
+  padding: 15px 20px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+li:first-child{
+  font-size: 19px;
+  border: 2px solid white;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+li:first-child :hover{
+  color: lightblue;
+  opacity:1;
+}
+
+nav{
+  padding: 40px 10%;
+  
+}
+.logo{
+  font-weight: bold;
+  font-size: 24px;
+  float: left;
+  padding-top: 25px;
+  font-family: 'Roboto Mono';
+}
+
+
+@media (max-width: 1500px){
+  .image{
+    right:-270px;
+  }  
+} 
+
+@media (max-width: 1100px){
+  
+  header{
+    overflow-x: hidden; 
+    overflow-y: visible;
+  }
+  .image{
+    right: -270px;
+    width: 75%;
+    padding-bottom: 70px; 
+  }
+}
+
+@media (max-width: 600px) {
+  
+  header{
+    position: static;
+    overflow: auto
+  }
+  
+  li:first-child{
+    font-size: 16px;
+    border: none;
+    padding-bottom: 20px;
+    padding-top: 15px;
+}
+
+  li:first-child :hover{
+    font-size: 16px;
+    opacity: 1;
+}
+
+  nav{
+    padding: 0 0 50px 0;    
+ }
+  
+ .details{
+    position: static;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  p{
+    padding:0;
+    width: 100%;
+  }
+ 
+  .image{
+    padding-bottom: 0;
+    position: static;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .buttons{
+     margin-bottom: 100px;
+  } 
+
+  
+}
+
+
+  
+
+</style>
+</head>
+<body>
+  <header>
+    <div class="test">
+    <nav>
+      </nav>
+
+    <div class="image">
+      <img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Blog_banner_desktop3x.max-1000x1000.png" alt="Article's hero media" class="aspect-ratio-image__image" alt="">
+    </div>
+    <div class="details">
+      <h1>NEED ANYTHING?</h1>
+      <h2>From Vegetables to Electronics,Books to Household items we deliver 'em all fast and affordably.</h2>
+    <div class="buttons">
+      <a routerLink="../services" class="button">Products Section..</a>
+    </div>
+
+    </div>
+    </div>
+  </header>
+  
+  
+</body>
+</html>
